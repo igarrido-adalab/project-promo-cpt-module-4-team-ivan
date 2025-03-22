@@ -60,16 +60,17 @@ app.get('/projectCard/:project_id', async (req, res) => {
 
   // EJS
   res.render('projectDetail', {projectData})
-})
-
-
-app.get('/', (req, res) => {
-
-  res.send('Works!')
 });
+
 
 // Servidor de estáticos
 
 const path = require('node:path');
 
 app.use(express.static(path.join(__dirname, 'static_detail_styles')));
+
+app.use(express.static(path.join(__dirname, 'static_public_frontend')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'static_public_frontend', 'index.html'));
+});
