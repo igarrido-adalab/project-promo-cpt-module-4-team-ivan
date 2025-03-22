@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/projectCard";
+const API_URL = import.meta.env.PROD ? "/api/projectCard" : "http://localhost:3000/api/projectCard";
 
 async function createProject(data) {
   try {

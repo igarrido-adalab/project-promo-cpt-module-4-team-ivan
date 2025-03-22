@@ -14,7 +14,8 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "dev": "node --watch src/index.js",
+    "deploy": "rm -rf src/static_public_frontend ; cd FRONTEND_REACT ; npm run build ; mv dist/ ../src/static_public_frontend/"
   },
   "dependencies": {
     "cors": "^2.8.5",

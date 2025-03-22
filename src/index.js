@@ -37,7 +37,7 @@ app.post('/api/projectCard/', async (req, res) => {
 
     res.json({
       success:true,
-      cardURL: `http://localhost:${PORT}/projectCard/${id}`
+      cardURL: `${req.protocol}://${req.hostname}/projectCard/${id}`
     })
   }
   catch(err) {
