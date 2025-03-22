@@ -1,0 +1,26 @@
+{
+  "name": "proyectos-molones-backend",
+  "version": "0.0.1",
+  "description": "Servidor para los proyectos molones",
+  "keywords": [
+    "express",
+    "cors",
+    "mysql",
+    "render"
+  ],
+  "license": "ISC",
+  "author": "Adalab y las Adalabers promo Clara",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "uuid": "^11.1.0"
+  }
+}
